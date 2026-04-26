@@ -1,0 +1,52 @@
+# ============================================================
+# CITATION.cff (How to cite this project)
+# ============================================================
+
+# REQ.UNIVERSAL: Professional open projects SHOULD include this file.
+# USAGE: See https://citation-file-format.github.io/ for details.
+
+cff-version: "1.2.0"
+type: software
+
+title: "Structural Explainability Mapping: Education Math Grade 8"
+version: "0.1.0"
+date-released: "2026-04-26"
+
+authors:
+  - family-names: Case
+    given-names: Denise M.
+    orcid: "https://orcid.org/0000-0001-6165-7389"
+    affiliation: "Northwest Missouri State University, School of Computer Science and Information Systems, Maryville, MO, USA"
+
+repository-code: "https://github.com/structural-explainability/se-mapping-education-math-g8"
+url: "https://github.com/structural-explainability/se-mapping-education-math-g8"
+
+license: MIT
+
+abstract: >
+  Grade 8 mathematics pilot mappings for Structural Explainability,
+  focused on linear equations and statistics.
+
+keywords:
+  # identity
+  - structural-explainability
+  - grade-8-mathematics
+  - education-standards
+  - linear-equations
+  - statistics
+  - coverage-matrix
+  - conformance-example
+
+  # practices
+  - cross-system-mapping
+  - atomic-competency-units
+  - declarative-mapping
+  - schema-validation
+  - reproducible-artifacts
+
+  # ecosystem
+  - python
+  - open-data
+  - open-source
+
+message: "If you use this work, please cite it using the metadata in this file."

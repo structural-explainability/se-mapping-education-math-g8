@@ -1,0 +1,85 @@
+# ============================================================
+# SE_MANIFEST.toml (Repository Declaration)
+# ============================================================
+
+schema = "se-manifest-2"
+
+# === Identity ===
+
+[meta]
+name = "se-mapping-education-math-g8"
+org = "structural-explainability"
+status = "planned"
+version = "0.1.0"
+
+[repo]
+class = "mapping"
+summary = "Grade 8 mathematics pilot mappings for linear equations and statistics."
+
+# === Structural contract ===
+
+[depends]
+required = [
+  "se-constitution",
+  "se-kernel",
+  "se-mapspec",
+  "se-mapping-education",
+  "se-mapping-education-math",
+]
+optional = []
+
+[provides]
+artifacts = [
+  "grade-8-math-pilot-acus",
+  "linear-equations-mappings",
+  "statistics-mappings",
+  "coverage-matrix",
+  "validation-reports",
+]
+
+[scope]
+subject = "mathematics"
+grade = 8
+grade_label = "Grade 8"
+includes = [
+  "Grade 8 mathematics pilot mappings",
+  "central ACUs for the pilot scope",
+  "linear equations examples",
+  "systems of linear equations examples",
+  "statistics and probability examples",
+  "coverage matrix examples",
+]
+
+excludes = [
+  "complete K-12 mathematics coverage",
+  "source registries",
+  "dashboards",
+  "student outcome analysis",
+  "policy recommendations",
+]
+
+[validation]
+entrypoint = "se_mapping_education_math_g8.app:run_validate"
+
+# === Behavior / governance ===
+
+[naming]
+pattern = "se-mapping-{standard}"
+
+[governance]
+authority = "structural-explainability"
+
+# === External references ===
+
+[citation]
+cff = "CITATION.cff"
+
+[traceability]
+identifier_map = "data/ctx"
+ctx_ids = [
+  "ctx.naep.math.g8",
+  "ctx.ccss.math.g8",
+  "ctx.finland.math.g8",
+  "ctx.pisa.math.age15",
+  "ctx.singapore.math.g8",
+]

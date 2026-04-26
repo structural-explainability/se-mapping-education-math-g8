@@ -1,0 +1,28 @@
+# data/mappings/statistics/pisa.toml
+
+[ctx]
+id = "ctx.pisa.math.age15"
+
+[[alignment]]
+source_id = "PISA.Math.UncertaintyAndData"
+target_id = "nor.math.g8.interpret_data_display"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "PISA.Math.UncertaintyAndData"
+target_id = "nor.math.g8.compare_distributions"
+relation = "overlaps"
+confidence = 0.75
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "PISA.Math.UncertaintyAndData"
+target_id = "nor.math.g8.compute_simple_probability"
+relation = "overlaps"
+confidence = 0.70
+method = "expert_review"
+human_validated = false

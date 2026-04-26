@@ -1,0 +1,26 @@
+# data/nor/math/linear_equations.toml
+
+[nor]
+domain = "math"
+grade = "g8"
+focus = "linear_equations"
+
+[[acu]]
+id = "nor.math.g8.solve_linear_eq_one_var"
+label = "Solve linear equations in one variable"
+description = "Solve linear equations in one variable"
+
+[[acu]]
+id = "nor.math.g8.solve_linear_eq_two_sides"
+label = "Solve linear equations with variables on both sides"
+description = "Solve linear equations such as ax + b = cx + d"
+
+[[acu]]
+id = "nor.math.g8.solve_linear_inequality"
+label = "Solve linear inequalities in one variable"
+description = "Solve linear inequalities in one variable"
+
+[[acu]]
+id = "nor.math.g8.solve_system_two_vars"
+label = "Solve systems of linear equations in two variables"
+description = "Solve systems of linear equations in two variables, such as ax + by = c and dx + ey = f"

@@ -1,0 +1,28 @@
+# data/mappings/statistics/finland.toml
+
+[ctx]
+id = "ctx.finland.math.lower_secondary"
+
+[[alignment]]
+source_id = "FI.Math.LowerSecondary.Statistics.DescribeData"
+target_id = "nor.math.g8.describe_variability"
+relation = "overlaps"
+confidence = 0.75
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "FI.Math.LowerSecondary.Statistics.DescribeData"
+target_id = "nor.math.g8.interpret_data_display"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "FI.Math.LowerSecondary.Probability"
+target_id = "nor.math.g8.compute_simple_probability"
+relation = "overlaps"
+confidence = 0.75
+method = "expert_review"
+human_validated = false

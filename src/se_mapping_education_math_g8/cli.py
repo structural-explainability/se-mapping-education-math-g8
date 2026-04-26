@@ -1,5 +1,32 @@
-def validate():
-    print("validate placeholder")
+"""Command-line interface for SE mapping examples."""
 
-def build_matrix():
-    print("matrix placeholder")
+import sys
+
+from se_mapping_education_math_g8.matrix import run_matrix
+from se_mapping_education_math_g8.sort import run_sort
+from se_mapping_education_math_g8.validate import run_validate
+
+
+def main(argv: list[str] | None = None) -> int:
+    """Entry point for CLI commands."""
+    if argv is None:
+        argv = sys.argv[1:]
+
+    if not argv:
+        print("Usage: python -m se_mapping_education_math_g8 <command>")
+        print("Commands: validate, matrix, sort")
+        return 1
+
+    command = argv[0]
+
+    if command == "sort":
+        return run_sort()
+
+    if command == "validate":
+        return run_validate()
+
+    if command == "matrix":
+        return run_matrix()
+
+    print(f"Unknown command: {command}")
+    return 1

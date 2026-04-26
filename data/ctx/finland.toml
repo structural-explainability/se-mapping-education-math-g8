@@ -1,0 +1,18 @@
+# data/ctx/finland.toml
+
+[ctx]
+id = "ctx.finland.math.lower_secondary"
+type = "curriculum_standard"
+name = "Finnish National Core Curriculum Mathematics (Grades 7-9)"
+grade_band = "7-9"
+
+[source]
+organization = "Finnish National Agency for Education (Opetushallitus)"
+country = "FI"
+
+[source.detail]
+name = "National Core Curriculum for Basic Education 2014"
+authority = "Finnish National Agency for Education (OPH)"
+url = "https://www.oph.fi/en/education-and-qualifications/national-core-curriculum-basic-education"
+pdf = "https://www.oph.fi/sites/default/files/documents/perusopetuksen_opetussuunnitelman_perusteet_2014_0.pdf"
+note = "Competence targets defined for end of Grade 9; statistics and probability under 'Data processing, statistics and probability'."

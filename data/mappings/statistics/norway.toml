@@ -1,0 +1,28 @@
+# data/mappings/statistics/norway.toml
+
+[ctx]
+id = "ctx.nor.math.lower_secondary"
+
+[[alignment]]
+source_id = "NOR.Math.LowerSecondary.Statistics.DataRepresentation"
+target_id = "nor.math.g8.interpret_data_display"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NOR.Math.LowerSecondary.Statistics.DataAnalysis"
+target_id = "nor.math.g8.describe_variability"
+relation = "overlaps"
+confidence = 0.75
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NOR.Math.LowerSecondary.Probability"
+target_id = "nor.math.g8.compute_simple_probability"
+relation = "overlaps"
+confidence = 0.75
+method = "expert_review"
+human_validated = false

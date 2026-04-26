@@ -1,0 +1,34 @@
+[nor]
+domain = "math"
+grade = "g8"
+focus = "statistics"
+
+[[acu]]
+id = "nor.math.g8.compare_distributions"
+label = "Compare distributions"
+description = "Compare two or more data distributions using summary measures or visual representations"
+
+[[acu]]
+id = "nor.math.g8.compute_mean"
+label = "Compute mean"
+description = "Calculate the arithmetic mean of a dataset"
+
+[[acu]]
+id = "nor.math.g8.compute_median"
+label = "Compute median"
+description = "Determine the median of a dataset"
+
+[[acu]]
+id = "nor.math.g8.compute_simple_probability"
+label = "Compute simple probability"
+description = "Calculate probability of simple events using ratios or fractions"
+
+[[acu]]
+id = "nor.math.g8.describe_variability"
+label = "Describe variability"
+description = "Describe spread or variability within a dataset"
+
+[[acu]]
+id = "nor.math.g8.interpret_data_display"
+label = "Interpret data display"
+description = "Interpret data displays such as graphs, charts, or tables to extract information and draw conclusions"

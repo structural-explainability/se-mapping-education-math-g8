@@ -1,0 +1,28 @@
+# data/mappings/naep_math_grade8_linear_equations.toml
+
+[ctx]
+id = "ctx.naep.math.g8"
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Algebra.LinearEquations"
+target_id = "nor.math.g8.solve_linear_eq_one_var"
+relation = "overlaps"
+confidence = 0.90
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Algebra.LinearEquations"
+target_id = "nor.math.g8.solve_linear_eq_two_sides"
+relation = "overlaps"
+confidence = 0.90
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Algebra.LinearInequalities"
+target_id = "nor.math.g8.solve_linear_inequality"
+relation = "overlaps"
+confidence = 0.85
+method = "expert_review"
+human_validated = false

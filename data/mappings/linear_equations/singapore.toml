@@ -1,0 +1,20 @@
+# data/mappings/linear_equations/singapore.toml
+
+[ctx]
+id = "ctx.singapore.math.g8"
+
+[[alignment]]
+source_id = "SG.Math.Secondary2.Algebra.LinearEquations"
+target_id = "nor.math.g8.solve_linear_eq_one_var"
+relation = "equivalent"
+confidence = 0.90
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "SG.Math.Secondary2.Algebra.LinearEquationsVariablesBothSides"
+target_id = "nor.math.g8.solve_linear_eq_two_sides"
+relation = "equivalent"
+confidence = 0.85
+method = "expert_review"
+human_validated = false

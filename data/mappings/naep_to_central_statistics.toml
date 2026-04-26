@@ -1,0 +1,53 @@
+# data/mappings/naep_to_central_statistics.toml
+
+[ctx]
+id = "ctx.naep.math.g8"
+type = "assessment_framework"
+
+# ------------------------------------------------------------
+# Statistics: Describe, summarize, compare data
+# ------------------------------------------------------------
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Statistics.DescribeData"
+target_id = "nor.math.g8.compute_mean"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Statistics.DescribeData"
+target_id = "nor.math.g8.compute_median"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Statistics.DescribeData"
+target_id = "nor.math.g8.describe_variability"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Statistics.DescribeData"
+target_id = "nor.math.g8.compare_distributions"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+# ------------------------------------------------------------
+# Probability
+# ------------------------------------------------------------
+
+[[alignment]]
+source_id = "NAEP.Math.G8.Statistics.Probability"
+target_id = "nor.math.g8.compute_simple_probability"
+relation = "overlaps"
+confidence = 0.85
+method = "expert_review"
+human_validated = false

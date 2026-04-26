@@ -1,0 +1,20 @@
+# data/mappings/statistics/ccss.toml
+
+[ctx]
+id = "ctx.ccss.math.g8"
+
+[[alignment]]
+source_id = "CCSS.Math.G8.SP.A"
+target_id = "nor.math.g8.compare_distributions"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "CCSS.Math.G8.SP.A"
+target_id = "nor.math.g8.interpret_data_display"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false

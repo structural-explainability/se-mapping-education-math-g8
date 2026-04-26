@@ -1,0 +1,18 @@
+# data/ctx/norway.toml
+
+[ctx]
+id = "ctx.nor.math.lower_secondary"
+type = "curriculum_standard"
+name = "Norwegian Mathematics Curriculum (Grades 8-10)"
+grade_band = "8-10"
+
+[source]
+organization = "Utdanningsdirektoratet (Norwegian Directorate for Education and Training)"
+country = "NO"
+
+[source.detail]
+name = "Læreplan i matematikk 1.-10. trinn (LK20, MAT01-05)"
+authority = "Utdanningsdirektoratet"
+url = "https://www.udir.no/lk20/mat01-05?lang=eng"
+pdf = "https://data.udir.no/kl06/v201906/laereplaner-lk20/MAT01-05.pdf?lang=eng"
+note = "Competence aims specified at end of year 10; nor.math.g8 IDs are decomposed from the Grades 8-10 block"

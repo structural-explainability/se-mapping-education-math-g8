@@ -1,0 +1,20 @@
+# data/mappings/linear_equations/pisa.toml
+
+[ctx]
+id = "ctx.pisa.math.age15"
+
+[[alignment]]
+source_id = "PISA.Math.Algebra.LinearEquations"
+target_id = "nor.math.g8.solve_linear_eq_one_var"
+relation = "overlaps"
+confidence = 0.80
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "PISA.Math.Algebra.LinearModels"
+target_id = "nor.math.g8.solve_linear_eq_two_sides"
+relation = "overlaps"
+confidence = 0.75
+method = "expert_review"
+human_validated = false

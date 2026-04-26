@@ -1,0 +1,18 @@
+# data/ctx/pisa.toml
+
+[ctx]
+id = "ctx.pisa.math.age15"
+type = "assessment_framework"
+subtype = "large_scale_assessment"
+name = "PISA Mathematics Framework (Age 15)"
+age_band = "15"
+
+[source]
+organization = "OECD Programme for International Student Assessment"
+country = "OECD"
+
+[source.detail]
+name = "PISA 2022 Mathematics Framework"
+authority = "OECD"
+url = "https://www.oecd.org/en/publications/pisa-2022-mathematics-framework_dfe0bf9c-en.html"
+note = "Not grade-banded; targets 15-year-olds. Uncertainty and data is one of four content categories. Aligns approximately to Grade 8-9 depending on national system."

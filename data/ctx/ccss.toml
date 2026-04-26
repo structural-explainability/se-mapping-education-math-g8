@@ -1,0 +1,17 @@
+# data/ctx/ccss.toml
+
+[ctx]
+id = "ctx.ccss.math.g8"
+type = "curriculum_standard"
+name = "Common Core State Standards Mathematics Grade 8"
+
+[source]
+organization = "NGA Center & CCSSO"
+country = "US"
+
+[source.detail]
+name = "Common Core State Standards for Mathematics"
+authority = "National Governors Association Center for Best Practices & Council of Chief State School Officers"
+url = "https://www.corestandards.org/Math/"
+pdf = "https://www.corestandards.org/wp-content/uploads/Math_Standards1.pdf"
+note = "Grade 8 statistics domain is 8.SP (Statistics and Probability); four standards covering scatter plots, association, and linear models"

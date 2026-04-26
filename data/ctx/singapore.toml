@@ -1,0 +1,18 @@
+# data/ctx/singapore.toml
+
+[ctx]
+id = "ctx.singapore.math.secondary2"
+type = "curriculum_standard"
+subtype = "national_curriculum"
+name = "Singapore Mathematics Syllabus Secondary Two (Grade 8)"
+
+[source]
+organization = "Ministry of Education Singapore"
+country = "SG"
+
+[source.detail]
+name = "Mathematics Syllabus Secondary One to Four (Express / Normal Academic)"
+authority = "Ministry of Education Singapore (MOE)"
+url = "https://www.moe.gov.sg/secondary/subject/mathematics"
+pdf = "https://www.moe.gov.sg/-/media/files/secondary/syllabuses/maths/2020-express_na-maths_syllabuses.pdf"
+note = "Secondary 2 (Grade 8) statistics: mean, median, mode, dot diagrams, histograms, stem-and-leaf plots. Probability introduced in Secondary 3."

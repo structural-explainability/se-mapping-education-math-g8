@@ -1,0 +1,28 @@
+# data/mappings/statistics/singapore.toml
+
+[ctx]
+id = "ctx.singapore.math.g8"
+
+[[alignment]]
+source_id = "SG.Math.Secondary2.Statistics.MeanMedianMode"
+target_id = "nor.math.g8.compute_mean"
+relation = "equivalent"
+confidence = 0.90
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "SG.Math.Secondary2.Statistics.MeanMedianMode"
+target_id = "nor.math.g8.compute_median"
+relation = "equivalent"
+confidence = 0.90
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "SG.Math.Secondary2.Statistics.DataDisplays"
+target_id = "nor.math.g8.interpret_data_display"
+relation = "equivalent"
+confidence = 0.85
+method = "expert_review"
+human_validated = false

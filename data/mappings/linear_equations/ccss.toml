@@ -1,0 +1,28 @@
+# data/mappings/linear_equations/ccss.toml
+
+[ctx]
+id = "ctx.ccss.math.g8"
+
+[[alignment]]
+source_id = "CCSS.Math.G8.EE.C.7"
+target_id = "nor.math.g8.solve_linear_eq_one_var"
+relation = "equivalent"
+confidence = 0.95
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "CCSS.Math.G8.EE.C.7"
+target_id = "nor.math.g8.solve_linear_eq_two_sides"
+relation = "overlaps"
+confidence = 0.90
+method = "expert_review"
+human_validated = false
+
+[[alignment]]
+source_id = "CCSS.Math.G8.EE.C.8"
+target_id = "nor.math.g8.solve_system_two_vars"
+relation = "equivalent"
+confidence = 0.95
+method = "expert_review"
+human_validated = false
