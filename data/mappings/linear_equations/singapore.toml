@@ -1,7 +1,7 @@
 # data/mappings/linear_equations/singapore.toml
 
 [ctx]
-id = "ctx.singapore.math.g8"
+id = "ctx.singapore.math.secondary2"
 
 [[alignment]]
 source_id = "SG.Math.Secondary2.Algebra.LinearEquations"

@@ -24,23 +24,21 @@ url: "https://github.com/structural-explainability/se-mapping-education-math-g8"
 license: MIT
 
 abstract: >
-  Grade 8 mathematics pilot mappings for Structural Explainability,
-  focused on linear equations and statistics.
+  Structural Explainability mapping examples for Grade 8 mathematics,
+  demonstrating cross-system alignment (CTX → NOR) across NAEP, CCSS,
+  and selected international systems.
 
 keywords:
   # identity
   - structural-explainability
-  - grade-8-mathematics
   - education-standards
-  - linear-equations
-  - statistics
+  - curriculum-alignment
   - coverage-matrix
   - conformance-example
 
   # practices
   - cross-system-mapping
-  - atomic-competency-units
-  - declarative-mapping
+  - declarative-specification
   - schema-validation
   - reproducible-artifacts
 

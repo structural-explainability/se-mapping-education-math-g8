@@ -9,7 +9,7 @@ schema = "se-manifest-2"
 [meta]
 name = "se-mapping-education-math-g8"
 org = "structural-explainability"
-status = "planned"
+status = "active"
 version = "0.1.0"
 
 [repo]
@@ -43,7 +43,7 @@ grade = 8
 grade_label = "Grade 8"
 includes = [
   "Grade 8 mathematics pilot mappings",
-  "central ACUs for the pilot scope",
+  "NOR units for the pilot scope",
   "linear equations examples",
   "systems of linear equations examples",
   "statistics and probability examples",
@@ -59,7 +59,7 @@ excludes = [
 ]
 
 [validation]
-entrypoint = "se_mapping_education_math_g8.app:run_validate"
+entrypoint = "se_mapping_education_math_g8.validate:run_validate"
 
 # === Behavior / governance ===
 
@@ -77,9 +77,10 @@ cff = "CITATION.cff"
 [traceability]
 identifier_map = "data/ctx"
 ctx_ids = [
-  "ctx.naep.math.g8",
   "ctx.ccss.math.g8",
-  "ctx.finland.math.g8",
+  "ctx.finland.math.lower_secondary",
+  "ctx.naep.math.g8",
+  "ctx.nor.math.lower_secondary",
   "ctx.pisa.math.age15",
-  "ctx.singapore.math.g8",
+  "ctx.singapore.math.secondary2",
 ]
