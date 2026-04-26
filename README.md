@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/badge/license-MIT-yellow.svg)](./LICENSE)
 
 [![CI](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/ci-python-zensical.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/ci-python-zensical.yml)
+[![Validate](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/validate.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/validate.yml)
 [![Docs](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/deploy-zensical.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/deploy-zensical.yml)
 [![Links](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/links.yml/badge.svg?branch=main)](https://github.com/structural-explainability/se-mapping-education-math-g8/actions/workflows/links.yml)
 
