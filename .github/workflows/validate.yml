@@ -1,7 +1,8 @@
 # ============================================================
 # .github/workflows/validate.yml (Validation Workflow)
 # ============================================================
-# Updated: 2026-04-26
+# Updated: 2026-04-26 (REPO-SPECIFIC)
+# PURPOSE: Run all validation checks and build the coverage matrix.
 
 name: Validate
 

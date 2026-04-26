@@ -280,9 +280,28 @@ wheels = [
 ]
 
 [[package]]
+name = "se-mapping-education"
+version = "0.1.1.dev1+g53936ee46"
+source = { git = "https://github.com/structural-explainability/se-mapping-education?branch=main#53936ee46d177d7308f938342aba5adb49d3a8e5" }
+dependencies = [
+    { name = "tomli-w" },
+]
+
+[[package]]
+name = "se-mapping-education-math"
+version = "0.1.1.dev1+gb91a56197"
+source = { git = "https://github.com/structural-explainability/se-mapping-education-math?branch=main#b91a5619785a8000a2fbbe30601a2a5bd11fb6aa" }
+dependencies = [
+    { name = "se-mapping-education" },
+    { name = "tomli-w" },
+]
+
+[[package]]
 name = "se-mapping-education-math-g8"
 source = { editable = "." }
 dependencies = [
+    { name = "se-mapping-education" },
+    { name = "se-mapping-education-math" },
     { name = "tomli-w" },
 ]
 
@@ -307,6 +326,8 @@ requires-dist = [
     { name = "pytest", marker = "extra == 'dev'" },
     { name = "pytest-cov", marker = "extra == 'dev'" },
     { name = "ruff", marker = "extra == 'dev'" },
+    { name = "se-mapping-education", git = "https://github.com/structural-explainability/se-mapping-education?branch=main" },
+    { name = "se-mapping-education-math", git = "https://github.com/structural-explainability/se-mapping-education-math?branch=main" },
     { name = "tomli-w" },
     { name = "zensical", marker = "extra == 'docs'" },
 ]

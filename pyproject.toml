@@ -16,7 +16,11 @@ readme = "README.md"
 requires-python = ">=3.15"
 dynamic = ["version"] # WHY: Version is computed from git tags at build time (see [tool.hatch.version] below).
 
-dependencies = ["tomli-w"] # REQ.DEPS: Core dependencies required for the package to function.
+dependencies = [
+    "se-mapping-education",
+    "se-mapping-education-math",
+    "tomli-w",
+]
 
 [project.optional-dependencies]
 # WHY: Optional dependency groups keep the core install clean and focused.
@@ -130,6 +134,12 @@ force-sort-within-sections = true
 [tool.ruff.lint.pydocstyle]
 # REQ: Google style is the project-wide docstring convention.
 convention = "google"   # ALT: "numpy" — choose one, never mix.
+
+# === UV LOCAL SOURCES ===
+
+[tool.uv.sources]
+se-mapping-education = { git = "https://github.com/structural-explainability/se-mapping-education", branch = "main" }
+se-mapping-education-math = { git = "https://github.com/structural-explainability/se-mapping-education-math", branch = "main" }
 
 # ============================================================
 # SECTION 3: BUILD SYSTEM (boilerplate; CUSTOM src/ agreement)

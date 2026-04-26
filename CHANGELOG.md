@@ -21,7 +21,8 @@ and this project adheres to **[Semantic Versioning](https://semver.org/spec/v2.0
   - statistics and probability
 - Validation module for mapping files (`validate`)
 - Coverage matrix generation (`matrix`)
-- CLI entry points (`python -m se_mapping_education_math_g8 validate|matrix`)
+- CLI entry points (`python -m se_mapping_education_math_g8 validate|matrix|sort`)
+- Validation, matrix, and sort via `se-mapping-education` shared library
 - Initial multi-system coverage matrix (NAEP, CCSS, PISA, Singapore, Finland, Norway)
 
 ---

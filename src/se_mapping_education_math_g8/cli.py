@@ -2,9 +2,9 @@
 
 import sys
 
-from se_mapping_education_math_g8.matrix import run_matrix
-from se_mapping_education_math_g8.sort import run_sort
-from se_mapping_education_math_g8.validate import run_validate
+from se_mapping_education.matrix import run_matrix
+from se_mapping_education.sort import run_sort
+from se_mapping_education.validate import run_validate
 
 
 def main(argv: list[str] | None = None) -> int:
