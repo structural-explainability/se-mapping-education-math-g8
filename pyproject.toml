@@ -19,6 +19,7 @@ dynamic = ["version"] # WHY: Version is computed from git tags at build time (se
 dependencies = [
     "se-mapping-education",
     "se-mapping-education-math",
+    "se-regimes",
     "tomli-w",
 ]
 
@@ -140,6 +141,7 @@ convention = "google"   # ALT: "numpy" — choose one, never mix.
 [tool.uv.sources]
 se-mapping-education = { git = "https://github.com/structural-explainability/se-mapping-education", branch = "main" }
 se-mapping-education-math = { git = "https://github.com/structural-explainability/se-mapping-education-math", branch = "main" }
+se-regimes = { git = "https://github.com/structural-explainability/se-regimes" }
 
 # ============================================================
 # SECTION 3: BUILD SYSTEM (boilerplate; CUSTOM src/ agreement)

@@ -114,6 +114,7 @@ uvx pre-commit run --all-files
 uv run python -m se_mapping_education_math_g8 sort
 uv run python -m se_mapping_education_math_g8 validate
 uv run python -m se_mapping_education_math_g8 matrix
+uv run python -m se_mapping_education_math_g8 verify-regimes
 
 # do chores
 npx markdownlint-cli "**/*.md" --fix

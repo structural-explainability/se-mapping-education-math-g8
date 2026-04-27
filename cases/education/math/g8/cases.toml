@@ -1,0 +1,140 @@
+# ============================================================
+# cases/education/math/g8/cases.toml
+# Regime stress-test cases grounded in se-mapping-education-math-g8 artifacts.
+# Domain: education.math.g8
+# Source repo: se-mapping-education-math-g8
+# ============================================================
+
+# --- ENR SPLIT: branching ---
+# NAEP.Math.G8.Algebra.LinearEquations is the standard identifier.
+# It can be expressed in multiple notational forms (short code, full name,
+# URI) while referring to the same assessment locus.
+
+[[case]]
+id = "edu-math-g8-enr-l-001"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:NAEP.Math.G8.Algebra.LinearEquations"
+description = """
+NAEP.Math.G8.Algebra.LinearEquations expressed as a short code vs a full
+descriptive label refers to the same assessment standard locus.
+"""
+candidate_regime = "ENR-L"
+transformations = ["BF"]
+notes = "Locus identity survives branching: same standard, different notational artifacts."
+[[case.expected]]
+after = "BF"
+regime = "ENR-L"
+outcome = "PRS"
+
+[[case]]
+id = "edu-math-g8-enr-i-001"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:NAEP.Math.G8.Algebra.LinearEquations"
+description = """
+The specific artifact 'NAEP.Math.G8.Algebra.LinearEquations' (short code form)
+does not survive branching into a URI-form artifact — distinct objects are produced.
+"""
+candidate_regime = "ENR-I"
+transformations = ["BF"]
+notes = "Artifact identity breaks under branching: distinct constructed objects."
+[[case.expected]]
+after = "BF"
+regime = "ENR-I"
+outcome = "BRK"
+
+# --- CTX SPLIT: decomposition ---
+# ctx.naep.math.g8 is defined as the full NAEP Grade 8 assessment framework.
+# It can be decomposed into sub-contexts (Algebra, Data/Statistics, Geometry)
+# while applying to the same student population.
+
+[[case]]
+id = "edu-math-g8-ctx-e-001"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:ctx.naep.math.g8"
+description = """
+ctx.naep.math.g8 decomposed into Algebra + Data/Statistics + Geometry
+sub-contexts still applies to the same Grade 8 student population.
+"""
+candidate_regime = "CTX-E"
+transformations = ["decomposition"]
+notes = "Extensional identity survives decomposition: same student case set."
+[[case.expected]]
+after = "decomposition"
+regime = "CTX-E"
+outcome = "PRS"
+
+[[case]]
+id = "edu-math-g8-ctx-s-001"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:ctx.naep.math.g8"
+description = """
+ctx.naep.math.g8 decomposed into sub-contexts is no longer the same
+structural organization as the unified framework.
+"""
+candidate_regime = "CTX-S"
+transformations = ["decomposition"]
+notes = "Structural identity breaks under decomposition: organization changed."
+[[case.expected]]
+after = "decomposition"
+regime = "CTX-S"
+outcome = "BRK"
+
+# --- NOR SPLIT: normative reorganization ---
+# nor.math.g8.solve_linear_eq_one_var is a normative structure for solving
+# one-variable linear equations. It can be reorganized into sub-objectives
+# (isolate variable, apply inverse operations, verify solution) while
+# preserving what proficiency requires.
+
+[[case]]
+id = "edu-math-g8-nor-c-001"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:nor.math.g8.solve_linear_eq_one_var"
+description = """
+nor.math.g8.solve_linear_eq_one_var reorganized into sub-objectives
+(isolate variable, apply inverse operations, verify) preserves
+what the standard requires of students.
+"""
+candidate_regime = "NOR-C"
+transformations = ["nor_reorg"]
+notes = "Content identity survives reorganization: same normative requirements."
+[[case.expected]]
+after = "nor_reorg"
+regime = "NOR-C"
+outcome = "PRS"
+
+[[case]]
+id = "edu-math-g8-nor-s-001"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:nor.math.g8.solve_linear_eq_one_var"
+description = """
+nor.math.g8.solve_linear_eq_one_var reorganized into sub-objectives
+is no longer the same structural form as the original single standard.
+"""
+candidate_regime = "NOR-S"
+transformations = ["nor_reorg"]
+notes = "Structural identity breaks under reorganization: organization changed."
+[[case.expected]]
+after = "nor_reorg"
+regime = "NOR-S"
+outcome = "BRK"
+
+# --- Additional NOR case: two-sides equation ---
+# nor.math.g8.solve_linear_eq_two_sides overlaps with LinearEquations
+# via the alignment mapping. Tests that the same regime behavior holds
+# for a second normative artifact in the same alignment cluster.
+
+[[case]]
+id = "edu-math-g8-nor-c-002"
+domain = "education.math.g8"
+source = "se-mapping-education-math-g8:nor.math.g8.solve_linear_eq_two_sides"
+description = """
+nor.math.g8.solve_linear_eq_two_sides reorganized to make the
+two-sides constraint explicit preserves what the standard requires.
+"""
+candidate_regime = "NOR-C"
+transformations = ["nor_reorg"]
+notes = "Second NOR-C case from the LinearEquations alignment cluster."
+[[case.expected]]
+after = "nor_reorg"
+regime = "NOR-C"
+outcome = "PRS"

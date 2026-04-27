@@ -1,0 +1,89 @@
+# ============================================================
+# .github/workflows/verify-regimes.yml (Verify Regime Compatibility)
+# ============================================================
+# Updated: 2026-04-27 (REPO-SPECIFIC)
+# PURPOSE: Verify that this mapping repository can be evaluated against
+# SE regime behavior and generate the regime coverage matrix.
+
+name: Verify Regime Compatibility
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch: # WHY: Manual trigger - always available
+  workflow_call: # WHY: Allow this workflow to be called by other workflows if needed
+    inputs:
+      cases_path:
+        required: false
+        type: string
+        default: "cases/"
+      report_path:
+        required: false
+        type: string
+        default: "reports/stress_report.md"
+
+permissions:
+  contents: read
+
+env:
+  PYTHONUNBUFFERED: "1"    # WHY: Real-time log output in CI.
+  PYTHONIOENCODING: "utf-8" # WHY: Consistent encoding across platforms.
+  PYTHON_VERSION: "3.15"
+  UV_PYTHON: "3.15"
+
+jobs:
+  verify_regime_compatibility:
+    runs-on: ubuntu-latest
+
+    steps:
+      # ============================================================
+      # A) ASSEMBLE: Checkout code and set up environment
+      # ============================================================
+
+      - name: A1) Checkout repository code
+        uses: actions/checkout@v6
+        # WHY: Required so all subsequent steps can access repo files.
+
+      - name: A2) Install uv (with caching)
+        uses: astral-sh/setup-uv@v7
+        with:
+          enable-cache: true
+          # WHY: Cache the uv tool itself for faster subsequent runs.
+          cache-dependency-glob: "uv.lock"
+          # WHY: Invalidate cache only when locked dependencies change.
+
+      - name: A3) Install Python ${{ env.PYTHON_VERSION }}
+        run: uv python install ${{ env.PYTHON_VERSION }}
+        # WHY: Ensures the pinned Python version is available in CI.
+        # OBS: Does not modify the repo; uv manages the interpreter locally.
+
+      - name: A4) Install all dependencies
+        run: uv sync --extra dev --extra docs --upgrade
+        # WHY: Install dev and docs extras so all check and build tools are available.
+        # OBS: --upgrade ensures CI catches dependency drift early.
+
+      - name: A5) Show tool versions
+        run: |
+          uv --version
+          uv run python --version
+          uv run python -m ruff --version
+          uv run python -m pyright --version
+          if [ -f "zensical.toml" ]; then
+            uv run python -m zensical --version
+          fi
+        # WHY: Version output helps debug when tools change.
+
+      # ============================================================
+      # B) BASELINE CHECKS: Verify regime compatibility
+      # ============================================================
+      - name: B1) Verify regime compatibility
+        run: |
+          uv run python -m se_mapping_education_math_g8 verify-regimes \
+            --cases "${{ inputs.cases_path || 'cases/' }}" \
+            --report "${{ inputs.report_path || 'reports/stress_report.md' }}"
+
+      - name: B2) Upload stress report
+        uses: actions/upload-artifact@v4
+        with:
+          name: stress-report
+          path: "${{ inputs.report_path || 'reports/stress_report.md' }}"
